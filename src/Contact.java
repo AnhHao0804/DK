@@ -1,35 +1,24 @@
 import java.util.ArrayList;
 
 public class Contact {
-    protected static ArrayList<Contact> list = new ArrayList<>();
-    private int id;
+    private Integer id;
     private String name;
     private String phone;
     private String email;
     private String address;
-
-    public Contact(int id, String name, String phone, String email, String address) {
+    public Contact(Integer id, String name, String phone, String email, String address) {
         this.id = id;
         this.name = name;
         this.phone = phone;
         this.email = email;
         this.address = address;
     }
-
-
-    public void showContact(Contact showfullcontact) {
-        System.out.println("ID: " + showfullcontact.getId());
-        System.out.println("Name: " + showfullcontact.getName());
-        System.out.println("Phone: " + showfullcontact.getPhone());
-        System.out.println("Email: " + showfullcontact.getEmail());
-        System.out.println("Address: " + showfullcontact.getAddress());
-    }
-
+    public Contact(String name, String phone, String email, String address) {}
     public int getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -64,7 +53,6 @@ public class Contact {
     public void setAddress(String address) {
         this.address = address;
     }
-
     @Override
     public String toString() {
         return "Contact{" +
